@@ -9,8 +9,10 @@ from datetime import datetime
 import json
 import os
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Constants
 DATA_FILE = os.path.abspath("courses.json")
